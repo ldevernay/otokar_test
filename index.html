@@ -26,6 +26,20 @@
         </div>
     </div>
 </main>
+
+<script type="text/javascript" async>
+    if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('progressive_web_app.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+  </script>
     <script src="external/jquery/dist/jquery.js"></script>
     <script src="external/jquery-ui/jquery-ui.js"></script>
     <script type="text/javascript" src="autocomplete.js"></script>
